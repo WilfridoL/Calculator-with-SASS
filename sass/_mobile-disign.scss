@@ -1,0 +1,136 @@
+@use 'variables';
+
+@mixin text {
+  font-size: 36px;
+  text-align: center;
+  font-weight: 400;
+}
+
+@mixin widthNumber {
+  width: 90%;
+  text-align: end;
+  // background: red;
+}
+
+.calculator-container {
+  width: 91.39%;
+  height: 82.65%;
+  background: variables.$calculatorBackground;
+  border-radius: 22px;
+  border: 2px solid variables.$calculatorBorder;
+  box-shadow: inset 4px 4px 10px 5px variables.$calculatorInnerShadow;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.display {
+  width: 92.40%;
+  height: 18.71%;
+  background: variables.$displayBackground;
+  border-radius: 20px;
+  top: 22px;
+  position: absolute;
+  overflow: hidden;
+
+  .sign {
+    position: absolute;
+    top: 27px;
+    left: 5px;
+    @include text;
+    color: variables.$singDisplay;
+  }
+
+  .numbers-x {
+    position: absolute;
+    left: 8.8%;
+    top: 5px;
+    @include text;
+    @include widthNumber;
+    color: variables.$letterBotton;
+  }
+
+  .line {
+    position: absolute;
+    left: 82.2%;
+    top: 46%;
+    width: 16%;
+    height: 2px;
+    border: 2px solid variables.$lineColor;
+    border-radius: 2px;
+  }
+
+  .numbers-y {
+    position: absolute;
+    left: 8.8%;
+    top: 49px;
+    @include text;
+    @include widthNumber;
+    color: variables.$letterBotton;
+  }
+
+  .result {
+    position: absolute;
+    left: 10%;
+    top: 25%;
+    @include text;
+    @include widthNumber;
+    color: variables.$letterBotton;
+    opacity: 0%;
+  }
+}
+
+.numbers {
+  width: 92.40%;
+  height: 65.22%;
+  position: absolute;
+  top: 150px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 5px;
+
+  .num {
+    width: 100%;
+    height: 61px;
+    display: inline-block;
+    background: variables.$bottonBackground;
+    border: none;
+    border-radius: 9px;
+    box-shadow: inset -4px 2px 5px 1px variables.$bottonInnerShadow;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.1s ease;
+
+    p {
+      @include text;
+      transition: transform 0.1s ease;
+    }
+  }
+
+  .num:nth-child(1) {
+    background: variables.$bottonBackgroundC;
+    color: variables.$letterBottonC;
+  }
+
+  .num:nth-child(12) {
+    grid-row: span 2;
+    height: 133px;
+    background: variables.$bottonBackgroundSame;
+  }
+
+  .num:nth-child(16) {
+    grid-column: span 4;
+    width: 100%;
+  }
+
+  // .num:focus{
+  //   transform: scale(0.98);
+  //   outline: none;
+  //   p{
+  //     transform: scale(0.98);
+  //   }
+  // }
+}

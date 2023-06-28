@@ -1,0 +1,350 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Roboto:wght@100;300;400;500;700;900&display=swap");
+.calculator-container {
+  width: 91.39%;
+  height: 82.65%;
+  background: #27105d;
+  border-radius: 22px;
+  border: 2px solid #0e0521;
+  box-shadow: inset 4px 4px 10px 5px rgba(76, 44, 149, 0.7);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.display {
+  width: 92.4%;
+  height: 18.71%;
+  background: #eee7ff;
+  border-radius: 20px;
+  top: 22px;
+  position: absolute;
+  overflow: hidden;
+}
+.display .sign {
+  position: absolute;
+  top: 27px;
+  left: 5px;
+  font-size: 36px;
+  text-align: center;
+  font-weight: 400;
+  color: rgba(17, 0, 57, 0.65);
+}
+.display .numbers-x {
+  position: absolute;
+  left: 8.8%;
+  top: 5px;
+  font-size: 36px;
+  text-align: center;
+  font-weight: 400;
+  width: 90%;
+  text-align: end;
+  color: #110039;
+}
+.display .line {
+  position: absolute;
+  left: 82.2%;
+  top: 46%;
+  width: 16%;
+  height: 2px;
+  border: 2px solid rgba(0, 0, 0, 0.59);
+  border-radius: 2px;
+}
+.display .numbers-y {
+  position: absolute;
+  left: 8.8%;
+  top: 49px;
+  font-size: 36px;
+  text-align: center;
+  font-weight: 400;
+  width: 90%;
+  text-align: end;
+  color: #110039;
+}
+.display .result {
+  position: absolute;
+  left: 10%;
+  top: 25%;
+  font-size: 36px;
+  text-align: center;
+  font-weight: 400;
+  width: 90%;
+  text-align: end;
+  color: #110039;
+  opacity: 0%;
+}
+
+.numbers {
+  width: 92.4%;
+  height: 65.22%;
+  position: absolute;
+  top: 150px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 5px;
+}
+.numbers .num {
+  width: 100%;
+  height: 61px;
+  display: inline-block;
+  background: #cebaff;
+  border: none;
+  border-radius: 9px;
+  box-shadow: inset -4px 2px 5px 1px rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.1s ease;
+}
+.numbers .num p {
+  font-size: 36px;
+  text-align: center;
+  font-weight: 400;
+  transition: transform 0.1s ease;
+}
+.numbers .num:nth-child(1) {
+  background: #a987fd;
+  color: #000000;
+}
+.numbers .num:nth-child(12) {
+  grid-row: span 2;
+  height: 133px;
+  background: #f3eeff;
+}
+.numbers .num:nth-child(16) {
+  grid-column: span 4;
+  width: 100%;
+}
+
+@media (min-width: 668px) {
+  .calculator-container {
+    width: 81.02%;
+    height: 86.62%;
+  }
+  .display {
+    width: 92.26%;
+    height: 18.83%;
+    top: 32px;
+  }
+  .display .sign {
+    top: 25%;
+    left: 5px;
+    display: flex;
+    align-items: center;
+    font-size: 64px;
+    text-align: center;
+    font-weight: 400;
+  }
+  .display .numbers-x {
+    left: 8.8%;
+    font-size: 64px;
+    text-align: center;
+    font-weight: 400;
+    width: 90%;
+    text-align: end;
+  }
+  .display .line {
+    left: 82.2%;
+    top: 50%;
+    width: 16%;
+    height: 2px;
+  }
+  .display .numbers-y {
+    left: 8.8%;
+    top: 50%;
+    font-size: 64px;
+    text-align: center;
+    font-weight: 400;
+    width: 90%;
+    text-align: end;
+  }
+  .display .result {
+    left: 8.8%;
+    top: 25%;
+    font-size: 64px;
+    text-align: center;
+    font-weight: 400;
+    width: 90%;
+    text-align: end;
+  }
+  .numbers {
+    width: 92.26%;
+    height: 65.3%;
+    top: 28%;
+    gap: 10px;
+  }
+  .numbers .num {
+    width: 100%;
+    height: 100%;
+  }
+  .numbers .num p {
+    font-size: 64px;
+    text-align: center;
+    font-weight: 400;
+  }
+  .numbers .num:nth-child(12) {
+    height: 100%;
+  }
+}
+@media (min-width: 1024px) {
+  .calculator-container {
+    width: 29.06%;
+    height: 83.07%;
+  }
+  .display {
+    width: 92.4%;
+    height: 18.55%;
+    top: 22px;
+  }
+  .display .sign {
+    top: 25%;
+    left: 5px;
+    display: flex;
+    align-items: center;
+    font-size: 36px;
+    text-align: center;
+    font-weight: 400;
+  }
+  .display .numbers-x {
+    left: 8.8%;
+    font-size: 36px;
+    text-align: center;
+    font-weight: 400;
+    width: 90%;
+    text-align: end;
+  }
+  .display .line {
+    left: 82.2%;
+    top: 46%;
+    width: 16%;
+    height: 2px;
+  }
+  .display .numbers-y {
+    left: 8.8%;
+    top: 50%;
+    font-size: 36px;
+    text-align: center;
+    font-weight: 400;
+    width: 90%;
+    text-align: end;
+  }
+  .display .result {
+    left: 8.8%;
+    top: 25%;
+    font-size: 36px;
+    text-align: center;
+    font-weight: 400;
+    width: 90%;
+    text-align: end;
+  }
+  .numbers {
+    width: 92.4%;
+    height: 65.22%;
+    top: 28%;
+    gap: 10px;
+  }
+  .numbers .num {
+    width: 100%;
+    height: 100%;
+  }
+  .numbers .num p {
+    font-size: 36px;
+    text-align: center;
+    font-weight: 400;
+  }
+  .numbers .num:nth-child(12) {
+    height: 100%;
+  }
+}
+@media (min-width: 1360px) {
+  .calculator-container {
+    width: 29.95%;
+    height: 85.1%;
+  }
+  .display {
+    width: 92.4%;
+    height: 18.55%;
+    top: 22px;
+  }
+  .display .sign {
+    top: 25%;
+    left: 5px;
+    display: flex;
+    align-items: center;
+    font-size: 36px;
+    text-align: center;
+    font-weight: 400;
+  }
+  .display .numbers-x {
+    left: 8.8%;
+    font-size: 36px;
+    text-align: center;
+    font-weight: 400;
+    width: 90%;
+    text-align: end;
+  }
+  .display .line {
+    left: 82.2%;
+    top: 46%;
+    width: 16%;
+    height: 2px;
+  }
+  .display .numbers-y {
+    left: 8.8%;
+    top: 50%;
+    font-size: 36px;
+    text-align: center;
+    font-weight: 400;
+    width: 90%;
+    text-align: end;
+  }
+  .display .result {
+    left: 8.8%;
+    top: 25%;
+    font-size: 36px;
+    text-align: center;
+    font-weight: 400;
+    width: 90%;
+    text-align: end;
+  }
+  .numbers {
+    width: 92%;
+    height: 65%;
+    top: 28%;
+    gap: 10px;
+  }
+  .numbers .num {
+    width: 100%;
+    height: 100%;
+  }
+  .numbers .num p {
+    font-size: 36px;
+    text-align: center;
+    font-weight: 400;
+  }
+  .numbers .num:nth-child(12) {
+    height: 100%;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1200 800'%3E%3Cdefs%3E%3CradialGradient id='a' cx='0' cy='800' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23211642'/%3E%3Cstop offset='1' stop-color='%23211642' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='b' cx='1200' cy='800' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23450680'/%3E%3Cstop offset='1' stop-color='%23450680' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='c' cx='600' cy='0' r='600' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23661bc1'/%3E%3Cstop offset='1' stop-color='%23661bc1' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='d' cx='600' cy='800' r='600' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23000000'/%3E%3Cstop offset='1' stop-color='%23000000' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='e' cx='0' cy='0' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23422B83'/%3E%3Cstop offset='1' stop-color='%23422B83' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='f' cx='1200' cy='0' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%238A0BFF'/%3E%3Cstop offset='1' stop-color='%238A0BFF' stop-opacity='0'/%3E%3C/radialGradient%3E%3C/defs%3E%3Crect fill='url(%23a)' width='1200' height='800'/%3E%3Crect fill='url(%23b)' width='1200' height='800'/%3E%3Crect fill='url(%23c)' width='1200' height='800'/%3E%3Crect fill='url(%23d)' width='1200' height='800'/%3E%3Crect fill='url(%23e)' width='1200' height='800'/%3E%3Crect fill='url(%23f)' width='1200' height='800'/%3E%3C/svg%3E");
+  background-attachment: fixed;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  font-family: "Roboto", sans-serif;
+}
+
+/*# sourceMappingURL=style.css.map */
